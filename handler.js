@@ -1,11 +1,13 @@
 "use strict";
-
 const MessagingResponse = require("twilio").twiml.MessagingResponse;
 
-// async version
+// lambda function (async)
 exports.twilio = async function(event, context) {
+  // create a message
   const twiml = new MessagingResponse();
+  const message = twiml.message();
 
+  // html response
   const response = {
     headers: {
       "Access-Control-Allow-Origin": "*", // CORS requirement
@@ -14,26 +16,19 @@ exports.twilio = async function(event, context) {
     statusCode: 200
   };
 
-  let work = `
+  let business = `
 Daniel J. Stroot
 Technical Strategy & Architecture
 Pacific Life, Retirement Services
 dan.stroot@pacificlife.com
-+1 (949) 219 7873
-https://pacificlife.com`;
++1 (949) 219 7873`;
 
   let personal = `
 Dan Stroot
 5 Leatherwood Court
 Coto de Caza, CA 92679
+dan.stroot@gmail.com
 +1 (949) 463-4044`;
-
-  let social = `
-
---- Social ---
-Blog: https://github.com/dstroot
-GitHub: https://github.com/dstroot
-LinkedIn: https://www.linkedin.com/in/danstroot/`;
 
   // NOTE: local and production events don't match. Locally, the data we need is found in
   // `event.Body` but in production it shows up in`event.body.Body`. Sheesh...
@@ -53,27 +48,23 @@ LinkedIn: https://www.linkedin.com/in/danstroot/`;
 
   // format message
   switch (body) {
-    case "blog":
-    case "social":
-      twiml
-        .message(work + social)
-        .media("https://avatars3.githubusercontent.com/u/1438457?s=200&v=4")
-        .media(
-          "http://s3-cdn-general-92679.s3-website-us-west-2.amazonaws.com/card.vcf"
-        );
-      break;
     case "personal":
-      twiml
-        .message(personal + social)
-        .media("https://avatars3.githubusercontent.com/u/1438457?s=200&v=4");
+      message.body(personal);
+      message.media(
+        "https://s3-us-west-2.amazonaws.com/aws-s3-hosting-90278/Dan+Stroot.vcf"
+      );
+      message.media(
+        "https://avatars3.githubusercontent.com/u/1438457?s=250&v=4"
+      );
       break;
     default:
-      twiml
-        .message(work)
-        .media("https://avatars3.githubusercontent.com/u/1438457?s=200&v=4")
-        .media(
-          "http://s3-cdn-general-92679.s3-website-us-west-2.amazonaws.com/card.vcf"
-        );
+      message.body(business);
+      message.media(
+        "https://s3-us-west-2.amazonaws.com/aws-s3-hosting-90278/Daniel+J.+Stroot.vcf"
+      );
+      message.media(
+        "https://avatars3.githubusercontent.com/u/1438457?s=250&v=4"
+      );
       break;
   }
 

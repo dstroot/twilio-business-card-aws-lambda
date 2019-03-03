@@ -2,10 +2,11 @@ BEGIN:VCARD
 VERSION:2.1
 N;LANGUAGE=en-us:Stroot;Daniel;J.
 FN:Daniel J. Stroot
+NICKNAME:Dan
 ORG:Pacific Life
 TITLE:AVP, Technology Strategy & Architecture
 TEL;WORK;VOICE:+1 (949) 219-7873
-ADR;WORK;PREF:;Newport Beach CA-700;700 Newport Center Drive;Newport Beach;CA;92660
+ADR;WORK;PREF:;;700 Newport Center Drive;Newport Beach;CA;92660;United States
 LABEL;WORK;PREF;ENCODING=QUOTED-PRINTABLE:700 Newport Center Drive=0D=0A=
 Newport Beach, CA  92660
 X-MS-OL-DEFAULT-POSTAL-ADDRESS:2

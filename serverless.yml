@@ -18,7 +18,7 @@ provider:
   runtime: nodejs8.10
   timeout: 10
   stage: prod
-  region: us-east-1
+  region: us-west-1
 
 iamRoleStatements:
   - Effect: "Allow"
@@ -26,11 +26,12 @@ iamRoleStatements:
     Resource: "*"
 
 package:
-  include:
-    - node_modules
   exclude:
-    - deploy.sh
     - .gitignore
+    - "Dan Stroot.vcf"
+    - "Daniel J. Stroot.vcf"
+    - data.json
+    - readme.md
 
 functions:
   twilio:
