@@ -1,0 +1,21 @@
+{
+  "ToCountry": "US",
+  "ToState": "CA",
+  "SmsMessageSid": "SM38f42217450089277206bc4eb64842ad",
+  "NumMedia": "0",
+  "ToCity": "LOS ANGELES",
+  "FromZip": "92780",
+  "SmsSid": "SM38f42217450089277206bc4eb64842ad",
+  "FromState": "CA",
+  "SmsStatus": "received",
+  "FromCity": "LAGUNA BEACH",
+  "Body": "Social",
+  "FromCountry": "US",
+  "To": "+19493330466",
+  "ToZip": "90017",
+  "NumSegments": "1",
+  "MessageSid": "SM38f42217450089277206bc4eb64842ad",
+  "AccountSid": "AC7487d0bacb8707cb32fc5f22bca7576e",
+  "From": "+19494634044",
+  "ApiVersion": "2010-04-01"
+}

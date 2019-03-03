@@ -1,0 +1,14 @@
+{
+  "name": "twilio-business-card",
+  "version": "1.0.0",
+  "description": "Get my info via sms",
+  "keywords": [
+    "sms",
+    "business card"
+  ],
+  "author": "Dan Stroot",
+  "license": "MIT",
+  "dependencies": {
+    "twilio": "^3.29.0"
+  }
+}
