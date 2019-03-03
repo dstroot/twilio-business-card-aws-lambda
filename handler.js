@@ -3,6 +3,9 @@ const MessagingResponse = require("twilio").twiml.MessagingResponse;
 
 // lambda function (async)
 exports.twilio = async function(event, context) {
+  // logging
+  console.info(event);
+
   // create a message
   const twiml = new MessagingResponse();
   const message = twiml.message();
@@ -54,7 +57,7 @@ dan.stroot@gmail.com
         "https://s3-us-west-2.amazonaws.com/aws-s3-hosting-90278/Dan+Stroot.vcf"
       );
       message.media(
-        "https://avatars3.githubusercontent.com/u/1438457?s=250&v=4"
+        "https://avatars3.githubusercontent.com/u/1438457?s=275&v=4"
       );
       break;
     default:
@@ -63,7 +66,7 @@ dan.stroot@gmail.com
         "https://s3-us-west-2.amazonaws.com/aws-s3-hosting-90278/Daniel+J.+Stroot.vcf"
       );
       message.media(
-        "https://avatars3.githubusercontent.com/u/1438457?s=250&v=4"
+        "https://avatars3.githubusercontent.com/u/1438457?s=275&v=4"
       );
       break;
   }
