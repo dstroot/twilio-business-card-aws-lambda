@@ -17,9 +17,9 @@ exports.twilio = async function(event, context) {
   let work = `
 Daniel J. Stroot
 Technical Strategy & Architecture
-Pacific Life, Retirement Services Division
+Pacific Life, Retirement Services
 dan.stroot@pacificlife.com
-+1 (949) 463-4044
++1 (949) 219 7873
 https://pacificlife.com`;
 
   let personal = `
@@ -57,17 +57,23 @@ LinkedIn: https://www.linkedin.com/in/danstroot/`;
     case "social":
       twiml
         .message(work + social)
-        .media("https://avatars3.githubusercontent.com/u/1438457?s=400&v=4");
+        .media("https://avatars3.githubusercontent.com/u/1438457?s=200&v=4")
+        .media(
+          "http://s3-cdn-general-92679.s3-website-us-west-2.amazonaws.com/card.vcf"
+        );
       break;
     case "personal":
       twiml
         .message(personal + social)
-        .media("https://avatars3.githubusercontent.com/u/1438457?s=400&v=4");
+        .media("https://avatars3.githubusercontent.com/u/1438457?s=200&v=4");
       break;
     default:
       twiml
         .message(work)
-        .media("https://avatars3.githubusercontent.com/u/1438457?s=400&v=4");
+        .media("https://avatars3.githubusercontent.com/u/1438457?s=200&v=4")
+        .media(
+          "http://s3-cdn-general-92679.s3-website-us-west-2.amazonaws.com/card.vcf"
+        );
       break;
   }
 
