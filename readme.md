@@ -2,7 +2,7 @@
 
 I wrote a post about this repo [here](https://danstroot.com/2019/03/02/digital-business-card/). Feel free to fork this repo and make your own digital business card.
 
-My card.vcf file is hosted in an S3 bucket. I included it here for reference.
+My *.vcf files are hosted in an S3 bucket. I included them here for reference.
 
 ### Reference Links
 
