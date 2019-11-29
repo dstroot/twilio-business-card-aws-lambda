@@ -1,8 +1,7 @@
-"use strict";
 const MessagingResponse = require("twilio").twiml.MessagingResponse;
 
 // lambda function (async)
-exports.twilio = async function(event, context) {
+exports.twilio = async function(event) {
   // logging
   console.info(event);
 

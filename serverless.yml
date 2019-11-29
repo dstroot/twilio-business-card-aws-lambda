@@ -1,3 +1,5 @@
+org: danstroot
+app: twilio-business-card-app
 # Welcome to Serverless!
 #
 # This file is the main config file for your service.
@@ -15,7 +17,7 @@ service: twilio-business-card
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs10.x #nodejs8.10
   timeout: 10
   stage: prod
   region: us-west-2

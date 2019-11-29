@@ -9,6 +9,9 @@
   "author": "Dan Stroot",
   "license": "MIT",
   "dependencies": {
-    "twilio": "^3.29.0"
+    "twilio": "^3.37.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1"
   }
 }
